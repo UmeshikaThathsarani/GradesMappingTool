@@ -1,0 +1,23 @@
+form{
+    background-color: rgb(167, 155, 159);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+    height: 400px;
+    width: 300px;
+}
+
+input{
+    margin: 5px;
+}
+
+.enterbtn{
+    float: right;
+    margin-top: 50px;
+    margin-right: 0;
+}
+
+label{
+    margin: 5px;
+}

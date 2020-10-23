@@ -1,0 +1,24 @@
+<head>
+    <link type="text/css" rel="stylesheet"  href="grades.component.css" /> 
+</head>
+<div class="div1">
+    <table>
+        <tr>
+            <th></th>
+            <th   *ngFor="let Assignment of Assignments">{{Assignment.name}}<hr/>
+                <span style="float: left; font-weight: normal; font-size: 12px;">Canvas</span>  
+                <span style="float: right; font-weight: normal; font-size: 12px;">eCollege</span>
+            </th>
+        </tr>
+        
+        <tr *ngFor="let Student of Students">
+            <td style="font-weight: bold;">{{Student.name}}</td>
+            <td *ngFor="let Assignment of Assignments" #tableData >
+                <app-score [assignmnentId]="Assignment.id" [CScores]="CanvasScores" [eScores]="EcollegeScores" [stdId]="Student.id" 
+                [title]="'StdID: '+Student.id+'\nAssignID: '+Assignment.id" [parentElement]="tableData">
+                </app-score>
+            </td>  
+        </tr>
+    </table>
+    
+</div>
